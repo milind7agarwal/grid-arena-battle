@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Grid Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Shared Grid Battleground</h1>
+          <p>Capture tiles in real time. Every click updates everyone instantly.</p>
+        </div>
+
+        <div class="identity">
+          <label for="nameInput">Your Name</label>
+          <div class="identity-row">
+            <input id="nameInput" minlength="2" maxlength="20" />
+            <button id="saveNameBtn">Save</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="stat-card">
+          <span>Online</span>
+          <strong id="onlineCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Your Tiles</span>
+          <strong id="myScore">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Status</span>
+          <strong id="statusText">Connecting...</strong>
+        </div>
+      </section>
+
+      <main class="content">
+        <section class="board-panel">
+          <div class="board-toolbar">
+            <div id="playerBadge" class="player-badge">Waiting for identity...</div>
+            <div class="hint">Tip: click any tile to capture it</div>
+          </div>
+          <div id="grid" class="grid" aria-label="Shared grid"></div>
+        </section>
+
+        <aside class="leaderboard">
+          <h2>Leaderboard</h2>
+          <ol id="leaderboardList"></ol>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
