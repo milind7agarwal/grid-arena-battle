@@ -1,4 +1,4 @@
-# Shared Grid Arena
+# Shared Grid Arena (https://grid-arena-battle-production.up.railway.app)
 
 A real-time multiplayer tile-capture board. Open the app in multiple tabs or browsers and claim cells; ownership updates instantly for everyone.
 
