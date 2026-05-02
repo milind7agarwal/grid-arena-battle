@@ -17,7 +17,11 @@ const users = new Map();
 const tiles = Array.from({ length: TOTAL_TILES }, () => null);
 const lastClaimAt = new Map();
 
-app.use(express.static("public"));
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(express.static(join(__dirname, "public")));
 
 function safeJsonParse(raw) {
   try {
